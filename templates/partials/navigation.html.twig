@@ -1,18 +1,18 @@
 <nav>
-    <ul>
-        {% for module in page.children.modular if module.header.menu is not sameas(false) %} {# visible? published? of type? #}
-            <li><a href="#{{ module.slug|regex_replace('~^_~', '') }}">{# TODO: {% if module.header.icon %}<i class="fa fa-{{ module.header.icon|e }}"></i>{% endif %} #}{{ module.menu|e }}</a></li>
-        {% endfor %}
+	<ul>
+		{% for module in page.children.modular if module.header.menu is not sameas(false) %} {# visible? published? of type? #}
+			<li><a href="#{{ module.slug|regex_replace('~^_~', '') }}">{# TODO: {% if module.header.icon %}<i class="fa fa-{{ module.header.icon|e }}"></i>{% endif %} #}{{ module.menu|e }}</a></li>
+		{% endfor %}
 
-        {#
-        {% for mitem in site.menu %}
-            <li>
-                <a href="{{ mitem.url|e }}">
-                    {% if mitem.icon %}<i class="fa fa-{{ mitem.icon|e }}"></i>{% endif %}
-                    {{ mitem.text|e }}
-                </a>
-            </li>
-        {% endfor %}
-        #}
-    </ul>
+		{# TODO?
+		{% for mitem in site.menu %}
+			<li>
+				<a href="{{ mitem.url|e }}">
+					{% if mitem.icon %}<i class="fa fa-{{ mitem.icon|e }}"></i>{% endif %}
+					{{ mitem.text|e }}
+				</a>
+			</li>
+		{% endfor %}
+		#}
+	</ul>
 </nav>

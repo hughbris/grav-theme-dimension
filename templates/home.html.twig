@@ -1,7 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-    {% for module in page.children.modular if module.header.menu is not sameas(false) %} {# visible? published? of type? #}
-        {{ module.content()|raw }}
-    {% endfor %}
+	{% for module in page.children.modular if module.header.menu is not sameas(false) %} {# visible? published? of type? #}
+		{{ module.content()|raw }}
+	{% endfor %}
 {% endblock %}

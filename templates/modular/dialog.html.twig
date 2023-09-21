@@ -1,13 +1,13 @@
 <!-- {{ page.title|e }} -->
-    <article id="{{ page.slug|regex_replace('~^_~', '') }}">
-        <h2 class="major">{{ page.title|e }}</h2>
+	<article id="{{ page.slug|regex_replace('~^_~', '') }}">
+		<h2 class="major">{{ page.title|e }}</h2>
 
-        {% if page.header.hero is defined %}
-            {% set hero = page.media[page.header.hero] %}
-            {% if hero %} {# checks for image names that don't load with page.media[], it's possible #}
-                <span class="image main"><img src="{{ hero.url }}" alt="{{ hero.meta.alt|default('') }}" /></span> {# TODO: cropZoom() ?? #}
-            {% endif %}
-        {%- endif %}
+		{% if page.header.hero is defined %}
+			{% set hero = page.media[page.header.hero] %}
+			{% if hero %} {# checks for image names that don't load with page.media[], it's possible #}
+				<span class="image main"><img src="{{ hero.url }}" alt="{{ hero.meta.alt|default('') }}" /></span> {# TODO: cropZoom() ?? #}
+			{% endif %}
+		{%- endif %}
 
-        {{ page.content()|raw }}
-    </article>
+		{{ page.content()|raw }}
+	</article>
