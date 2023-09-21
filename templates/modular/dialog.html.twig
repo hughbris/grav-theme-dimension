@@ -1,0 +1,6 @@
+<!-- {{ page.title|e }} -->
+    <article id="{{ page.slug|regex_replace('~^_~', '') }}">
+        <h2 class="major">{{ page.title|e }}</h2>
+        <span class="image main"><img src="{{ url('theme://images/pic01.jpg') }}" alt="" /></span>
+        {{ page.content()|raw }}
+    </article>
