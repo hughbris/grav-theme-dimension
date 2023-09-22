@@ -208,7 +208,7 @@
 				// Add state?
 					if (typeof addState != 'undefined'
 					&&	addState === true)
-						history.pushState(null, null, '#');
+						history.pushState('', '', window.location.pathname + window.location.search);
 
 				// Handle lock.
 
@@ -294,8 +294,12 @@
 				// Close.
 					$('<div class="close">Close</div>')
 						.appendTo($this)
-						.on('click', function() {
+						.on('click', function(e) {
 							location.hash = '';
+							if (window.history.replaceState) {
+								window.history.replaceState('', '', window.location.pathname + window.location.search);
+							}
+							e.preventDefault();
 						});
 
 				// Prevent clicks from inside article from bubbling.
