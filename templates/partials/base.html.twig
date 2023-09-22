@@ -8,7 +8,7 @@
 <head>
 {% block head %}
 	<meta charset="utf-8" />
-	<title>{% if header.title %}{{ header.title|e }} | {% endif %}{{ site.title|e }}</title>
+	<title>{% if page.home %}{{ site.title|e }}{% else %}{{ page.title|e }}{% endif %}</title>
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -53,9 +53,9 @@
 			</div>
 			<div class="content">
 				<div class="inner">
-					<h1>{{ config.site.title|e }}</h1>
-					{% if config.site.tagline is defined and config.site.tagline|trim is not empty %}
-						{{ config.site.tagline|markdown() }}
+					<h1>{{ page.title|e }}</h1>
+					{% if page.header.tagline is defined and page.header.tagline|trim is not empty %}
+						{{ page.header.tagline|markdown() }}
 					{% endif %}
 				</div>
 			</div>
