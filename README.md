@@ -5,3 +5,11 @@ The **Dimension** Theme is for [Grav CMS](http://github.com/getgrav/grav).  This
 ## Description
 
 Port of HTML5UP&#039;s Dimension theme
+
+## Configuration
+
+Default configuration:
+
+```yaml
+icon: gem
+```
