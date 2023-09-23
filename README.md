@@ -13,4 +13,5 @@ Default configuration:
 ```yaml
 icon: gem
 # hero_image:
+# credit_blurb: 
 ```

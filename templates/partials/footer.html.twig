@@ -1,0 +1,8 @@
+<!-- Footer --> {# Add this Twig if you want to insert the current year in this template: {{ 'now'|date('Y') }} #}
+	<footer id="footer">
+		<p class="copyright">© {{ config.site.author.name }}.
+		{%- if theme_var('credit_blurb') %}
+			{{ theme_var('credit_blurb')|markdown(false) }}
+		{% endif -%}
+		</p>
+	</footer>
