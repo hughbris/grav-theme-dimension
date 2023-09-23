@@ -21,6 +21,14 @@
 {% block stylesheets %}
 	{% style 'theme://assets/css/main.css' priority: 100 %}
 	{% style 'theme://assets/css/noscript.css' at 'noscript' %}
+	{% if config.theme.hero_image %}
+		{% set hero_file = (config.theme.hero_image|first).name %}
+		{% style %}
+		#bg::after {
+			background-image: url("{{ url('theme://css/' ~ hero_file) }}");
+		}
+		{% endstyle %}
+	{% endif %}
 	{% style 'theme://css/custom.css' priority: 98 %}
 {% endblock %}
 

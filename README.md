@@ -12,4 +12,5 @@ Default configuration:
 
 ```yaml
 icon: gem
+# hero_image:
 ```
