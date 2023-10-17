@@ -1,6 +1,6 @@
 <nav>
 	<ul>
-		{% for module in page.children.modular if module.header.menu is not sameas(false) %} {# visible? published? of type? #}
+		{% for module in page.children.modular if module.header.visible is not sameas(false) %} {# published? of type? #}
 			<li><a href="#{{ module.slug|regex_replace('~^_~', '') }}">{# TODO: {% if module.header.icon %}<i class="fa fa-{{ module.header.icon|e }}"></i>{% endif %} #}{{ module.menu|e }}</a></li>
 		{% endfor %}
 
