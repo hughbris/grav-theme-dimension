@@ -1,0 +1,21 @@
+title: Homepage
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+
+      fields:
+        content:
+          fields:
+
+            header.tagline:
+              type: text
+              label: Tagline
+              toggleable: true
+              ordering@: header.title
+
+            content:
+              unset@: true

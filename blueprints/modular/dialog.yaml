@@ -1,0 +1,25 @@
+title: Dialog page
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+
+            header.title:
+              label: Heading
+
+            header.hero:
+              type: pagemediaselect
+              label: Hero image
+              ordering@: header.title
+              toggleable: true
+              multiple: false
+              # help: '3:1 with height >= 200' # TODO
