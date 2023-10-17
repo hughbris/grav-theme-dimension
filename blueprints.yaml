@@ -20,13 +20,13 @@ dependencies:
 form:
   validation: loose
   fields:
-    dropdown.enabled:
-        type: toggle
-        label: Dropdown in Menu
-        highlight: 1
-        default: 1
-        options:
-          1: PLUGIN_ADMIN.ENABLED
-          0: PLUGIN_ADMIN.DISABLED
-        validate:
-          type: bool
+    hero_image: # 1568 x 1024
+      type: file
+      label: Custom background image
+      destination: 'theme://css'
+      multiple: false
+      markdown: true
+      description: Will be used instead of default logo `theme://images/bg.jpg`. Dimensions should be ....
+      accept:
+        - image/*
+
