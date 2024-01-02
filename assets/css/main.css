@@ -1659,3 +1659,19 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+/* Incomplete additions for Grav classes. I Am Not A Stylist. */
+
+form .notices.success {
+	background-color: #3d8b3d26;
+	font-weight: bold;
+	transition: border-color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+	border-radius: 8px;
+	border: solid 2px #3d8b3d;
+	color: inherit;
+	padding: 0.5rem 1rem;
+}
+
+.notices p {
+	margin-bottom: inherit;
+}
