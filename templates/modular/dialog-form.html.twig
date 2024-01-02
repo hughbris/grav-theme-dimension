@@ -1,0 +1,6 @@
+{% extends 'modular/dialog.html.twig' %}
+
+{% block content %}
+	{{ parent() }}
+	{{ include('forms/form.html.twig', {form: forms(0)}) }}
+{% endblock %}

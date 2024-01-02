@@ -9,5 +9,7 @@
 			{% endif %}
 		{%- endif %}
 
-		{{ page.content()|raw }}
+		{% block content %}
+			{{ page.content()|raw }}
+		{% endblock %}
 	</article>
